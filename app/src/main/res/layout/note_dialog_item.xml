@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/noteDialogRelativeLayoutTest"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#101845"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/noteTitleEditTextTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:hint="@string/title"
+        android:maxLength="24"
+        android:minHeight="48dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textColorHint="#DAD3D3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tv_dateTime_dialogTest"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/noteTitleEditTextTest"
+        android:background="@color/transparent"
+        android:textColor="@color/white"
+        android:gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/noteContentEditTextTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dateTime_dialogTest"
+        android:minHeight="48dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+        android:hint="@string/type_something_here"
+        android:textColorHint="#DAD3D3"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:background="@drawable/edittext_background"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</RelativeLayout>
+
+

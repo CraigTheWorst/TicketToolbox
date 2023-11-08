@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/noteItemRelative"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:elevation="7dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Custom layout for note item -->
+    <include
+        android:id="@+id/include"
+        layout="@layout/custom_note_layout"
+        android:layout_width="match_parent"
+        android:layout_height="117dp"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/noteTitleEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="200dp"
+        android:background="@color/transparent"
+        android:editable="false"
+        android:elevation="7dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:hint="@string/title"
+        android:maxLength="17"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#DAD3D3"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include"
+        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:background="@color/transparent"
+        android:clickable="false"
+        android:focusable="false"
+        android:elevation="7dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noteTitleEditText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calPopupConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/calcustompopup_bg"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ticket_details3"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FAF9F9"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Stylish Divider Line -->
+    <View
+        android:layout_width="155dp"
+        android:layout_height="1dp"
+        android:background="#FAF9F9"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Tech Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tech_name3"
+        android:textStyle="bold"
+        android:textColor="#FAF9F9" />
+
+    <EditText
+        android:id="@+id/techNameTextView"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="@string/tech_name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:autofillHints="" />
+
+    <!-- Mod Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mod_name3"
+        android:textStyle="bold"
+        android:textColor="#FAF9F9" />
+
+    <EditText
+        android:id="@+id/modNameTextView"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="@string/MODname"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:autofillHints="" />
+
+    <!-- Ticket Number -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ticket_number3"
+        android:textStyle="bold"
+        android:textColor="#FAF9F9" />
+
+    <EditText
+        android:id="@+id/ticketNumberTextView"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="@string/TicketNum"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:autofillHints="" />
+
+    <!-- Part Type -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/part_type3"
+        android:textStyle="bold"
+        android:textColor="#FAF9F9" />
+
+    <EditText
+        android:id="@+id/partTypeTextView"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="@string/PartType"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:autofillHints="" />
+
+    <!-- Tracking Number -->
+    <TextView
+        android:id="@+id/trackingNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tracking_number"
+        android:textStyle="bold"
+        android:textColor="#FAF9F9" />
+
+    <EditText
+        android:id="@+id/trackingNumberEditText"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="@string/tracking_number"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:autofillHints="" />
+
+    <!-- Serial Number -->
+    <TextView
+        android:id="@+id/serialNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serial Number"
+        android:textStyle="bold"
+        android:textColor="#FAF9F9" />
+
+    <EditText
+        android:id="@+id/serialNumberEditText"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="Serial Number"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:autofillHints="" />
+
+    <!-- Update Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/updateButton"
+        style="@style/CustomMaterialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="@string/update" />
+
+
+    <!-- Creation Date -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#FAF9F9" />
+
+    <TextView
+        android:id="@+id/creationDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/mm_dd_yy"
+        android:textColor="#FAF9F9"
+        android:autofillHints="" />
+
+</LinearLayout>

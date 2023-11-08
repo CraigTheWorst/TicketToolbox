@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "213700153011",
+    "firebase_url": "https://tickettoolboxapp-default-rtdb.firebaseio.com",
+    "project_id": "tickettoolboxapp",
+    "storage_bucket": "tickettoolboxapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213700153011:android:7de38eed4a748b83a42ac6",
+        "android_client_info": {
+          "package_name": "com.example.tickettoolbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213700153011-aqscoolsip1133bsun1gfej8b31qji07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYKr4zq78INiRQjxCM8IeMAkCPif2orDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213700153011-aqscoolsip1133bsun1gfej8b31qji07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_hamburger"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/Return_Form_hamburger"
+        android:title="Return Form" />
+
+    <item
+        android:id="@+id/Notepad_hamburger"
+        android:title="Notepad" />
+
+    <item
+        android:id="@+id/Images_hamburger"
+        android:title="Images" />
+
+    <item
+        android:id="@+id/Return_Parts_hamburger"
+        android:title="Return Parts" />
+</menu>

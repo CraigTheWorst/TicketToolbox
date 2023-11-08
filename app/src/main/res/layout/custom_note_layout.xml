@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/noteItemNestedRelative"
+    android:clickable="false"
+    android:focusable="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roundednoteitemlayout"
+    android:elevation="7dp"
+    android:padding="16dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/noteContentEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
+        android:clickable="false"
+        android:editable="false"
+        android:focusable="false"
+        android:maxLines="5"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="12sp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</RelativeLayout>

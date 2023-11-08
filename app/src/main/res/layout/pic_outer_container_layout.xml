@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/picItemCon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:elevation="7dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Custom layout for note item -->
+    <include
+        android:id="@+id/include"
+        layout="@layout/pic_container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="117dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_imgName"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginEnd="137dp"
+        android:background="@color/transparent"
+        android:elevation="7dp"
+        android:focusable="false"
+        android:gravity="center"
+        android:hint="@string/img_name_here"
+        android:textColor="@color/white"
+        android:textColorHint="#757575"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

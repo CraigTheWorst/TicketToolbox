@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_return_parts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_blue"
+    tools:context=".activities.Calendar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calendarConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/navy_blue"
+        tools:context=".activities.Calendar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recycleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="19dp"
+            android:layout_weight="0.5"
+            android:background="#36454f"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchBarConstraint">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:background="@drawable/roundedlinearlayout"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="-1dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/additemConstraint"
+                android:layout_width="84dp"
+                android:layout_height="86dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="@id/recycleContainer"
+                app:layout_constraintRight_toRightOf="@id/recycleContainer">
+
+                <ImageButton
+                    android:id="@+id/additemButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="#00000000"
+                    android:contentDescription="@string/todo32"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_add_button3"
+                    tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchBarConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="159dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_navConstraint">
+
+            <SearchView
+                android:id="@+id/sv_returnParts"
+                android:layout_width="292dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_view_background"
+                style="@style/SearchViewStyle"
+                android:elevation="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:iconifiedByDefault="false" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/calButtonConstraint"
+                android:layout_width="75dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sv_returnParts"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/calendarViewButton"
+                    android:layout_width="50dp"
+                    android:layout_height="51dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/todo12"
+                    android:elevation="12dp"
+                    app:layout_constraintBottom_toTopOf="@+id/refresh_Button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/calendar_white_24_24" />
+
+                <ImageButton
+                    android:id="@+id/refresh_Button"
+                    android:layout_width="54dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#00000000"
+                    android:contentDescription="@string/todo98"
+                    android:minWidth="48dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarViewButton"
+                    app:srcCompat="@drawable/refresh_24_24"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageButton
+                android:id="@+id/btnDeleteAllParts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="240dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/todo45"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:src="@drawable/delete_24_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/calButtonConstraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sv_returnParts"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/title_navConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/appTitleCal"
+                android:layout_width="150dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/black_ops_one"
+                android:gravity="center"
+                android:text="@string/to_return"
+                android:textAlignment="center"
+                android:textColor="#FAF6F6"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/calHamburgerMenu"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="173dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="21dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/todo988"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/appTitleCal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menu_white_32_32"
+                tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:background="@color/navy_blue">
+
+        <!-- Add your drawer items here -->
+
+        <!-- Drawer Item: HOME -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home1"
+                android:contentDescription="@string/home_icon" />
+
+            <TextView
+                android:id="@+id/Home_Hamburger3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Home"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white" />
+
+
+        <!-- Drawer Item: FORMS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/home_icon"
+                android:src="@drawable/ic_form_button5" />
+
+            <TextView
+                android:id="@+id/Forms_Hamburger3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Return Form"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!-- Drawer Item: IMAGES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_images_button3"
+                android:contentDescription="@string/home_icon" />
+
+            <TextView
+                android:id="@+id/Images_Hamburger3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Images"
+                android:textColor="@color/white"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+        <!-- Drawer Item: NOTEPAD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_notepad_button3"
+                android:contentDescription="@string/home_icon" />
+
+            <TextView
+                android:id="@+id/Notepad_Hamburger3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notepad"
+                android:textColor="@color/white"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+
+        <!-- Drawer Item: RETURN PARTS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_return_parts_button5"
+                android:contentDescription="@string/home_icon" />
+
+            <TextView
+                android:id="@+id/Return_Parts_Hamburger3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Return Parts"
+                android:textColor="@color/gold"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

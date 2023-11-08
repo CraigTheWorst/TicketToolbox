@@ -1,0 +1,65 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home2"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/Return_Form_hamburger2"
+        android:title="Return Form"/>
+
+    <item
+        android:id="@+id/Notepad_hamburger2"
+        android:title="Notepad" />
+
+    <item
+        android:id="@+id/Images_hamburger2"
+        android:title="Images"/>
+
+    <item
+        android:id="@+id/Return_Parts_hamburger2"
+        android:title="Return Parts" />
+
+    <item android:id="@+id/notesTemplates"
+        android:title="Templates">
+        <menu>
+
+            <item android:id="@+id/ArbysTemplate"
+                android:title="Arby's" />
+
+            <item android:id="@+id/apbTemplate"
+                android:title="Applebee's" />
+
+            <item android:id="@+id/bonchonTemplate"
+                android:title="Bonchon" />
+
+            <item android:id="@+id/cpkTemplate"
+                android:title="California Pizza Kitchen" />
+
+            <item android:id="@+id/dennysTemplate"
+                android:title="Denny's" />
+
+            <item android:id="@+id/IHOPTemplate"
+                android:title="IHOP" />
+
+            <item android:id="@+id/jackintheboxTemplate"
+                android:title="Jack in the Box" />
+
+            <item android:id="@+id/lovisaTemplate"
+                android:title="Lovisa" />
+
+            <item android:id="@+id/otbTemplate"
+                android:title="On The Border" />
+
+            <item android:id="@+id/paneraTemplate"
+                android:title="Panera Bread" />
+
+            <item android:id="@+id/pfChangsTemplate"
+                android:title="P.F. Chang's" />
+
+            <item android:id="@+id/snsTemplate"
+                android:title="Steak N' Shake" />
+            <!-- Add more restaurant items as needed -->
+        </menu>
+    </item>
+    <!-- Add more top-level items as needed -->
+</menu>

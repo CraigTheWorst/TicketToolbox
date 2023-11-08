@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_images_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_blue"
+    tools:context=".activities.Images">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/picrootRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/navy_blue">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/titleImages_navConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/transparent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/appTitleImages"
+                android:layout_width="150dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/black_ops_one"
+                android:gravity="center"
+                android:text="@string/imagescap"
+                android:textAlignment="center"
+                android:textColor="#FAF6F6"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imagesHamburgerMenu"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="181dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="21dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/todo988"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/appTitleImages"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menu_white_32_32"
+                tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/picbuttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageButton
+                android:id="@+id/picbtnFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:src="@drawable/filter3"
+                tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck"
+                android:contentDescription="@string/todo" />
+
+            <ImageButton
+                android:id="@+id/picbtn_deleteAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:src="@drawable/delete_24_24"
+                tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck"
+                android:contentDescription="@string/todo" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/picRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/titleImages_navConstraint"
+            app:layout_constraintBottom_toTopOf="@+id/picbuttonLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:background="@color/navy_blue">
+
+        <!-- Add your drawer items here -->
+
+        <!-- Drawer Item: HOME -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home1"
+                android:contentDescription="@string/home_icon" />
+
+            <TextView
+                android:id="@+id/Home_Hamburger5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/home345"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white" />
+
+
+        <!-- Drawer Item: FORMS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/home_icon"
+                android:src="@drawable/ic_form_button5" />
+
+            <TextView
+                android:id="@+id/Forms_Hamburger5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Return Form"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!-- Drawer Item: IMAGES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_images_button3"
+                android:contentDescription="@string/home_icon" />
+
+            <TextView
+                android:id="@+id/Images_Hamburger5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Images"
+                android:textColor="@color/gold"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+        <!-- Drawer Item: NOTEPAD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_notepad_button3"
+                android:contentDescription="@string/home_icon" />
+
+            <TextView
+                android:id="@+id/Notepad_Hamburger5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notepad"
+                android:textColor="@color/white"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+
+        <!-- Drawer Item: RETURN PARTS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_return_parts_button5"
+                android:contentDescription="@string/home_icon" />
+
+            <TextView
+                android:id="@+id/Return_Parts_Hamburger5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Return Parts"
+                android:textColor="@color/white"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
